@@ -34,38 +34,38 @@ redirect_from:
 ![Android Studio welcome screen](/assets/wiki/images/project-generation2.png){: style="width: 873px;" }
 ![Android Studio SDK manager](/assets/wiki/images/project-generation3.png){: style="width: 1159px;" }
 
-* **Sub Projects**: libGDX is cross-platform. By default, all the target platforms are included (Desktop; Android; iOS; HTML). There is no need to change the default value unless you are sure you will never compile for a specific target.
+* **Sub Projects**: libGDX 是跨平台的. 默认状态下, 所有平台都包含的 (Desktop; Android; iOS; HTML)，除非您确定永远不会针对特定目标进行编译，否则没有必要去更改默认值。
 
-**Note:** iOS projects can only be compiled on macOS.
+**Note:** iOS 项目只能在 macOS 系统环境下编译.
 {: .notice--info}
 
-* **extensions**: the extensions offered are:<br>
-  * **[Bullet](/wiki/extensions/physics/bullet/bullet-physics)**: 3D Collision Detection and Rigid Body Dynamics Library.<br>
-  * **[FreeType](/wiki/extensions/gdx-freetype)**: Scalable font. Great to manipulate font size dynamically. However be aware that it does not work with HTML target if you cross compile for that target.<br>
-  * **Tools**: Set of tools including: particle editor (2d/3d), bitmap font and image texture packers.<br>
-  * **[Controllers](https://github.com/libgdx/gdx-controllers)**: Library to handle controllers (e.g. Xbox 360 controller).<br>
-  * **[Box2d](/wiki/extensions/physics/box2d)**: Box2D is a 2D physics library.<br>
-  * **[Box2dlights](https://github.com/libgdx/box2dlights)**: 2D lighting framework that uses box2d for raycasting and OpenGL ES 2.0 for rendering.<br>
-  * **[Ashley](https://github.com/libgdx/ashley)**: A tiny entity framework.<br>
-  * **[Ai](https://github.com/libgdx/gdx-ai)**: An artificial intelligence framework.<br>
+* **扩展**: 提供的扩展有：<br>
+  * **[Bullet](/wiki/extensions/physics/bullet/bullet-physics)**: 3D 碰撞检测和刚体动力学库.<br>
+  * **[FreeType](/wiki/extensions/gdx-freetype)**: 可扩展字体。非常适合动态操作字体大小。但是请注意，如果您为该目标进行交叉编译，则它不适用于 HTML 目标。<br>
+  * **Tools**: 工具集，包括：粒子编辑器（2d/3d）、位图字体和图像纹理打包器。<br>
+  * **[Controllers](https://github.com/libgdx/gdx-controllers)**: 用于处理控制器的库（例如 Xbox 360 控制器）。<br>
+  * **[Box2d](/wiki/extensions/physics/box2d)**: 一个2D物理库。<br>
+  * **[Box2dlights](https://github.com/libgdx/box2dlights)**: 2D光照框架，使用box2d进行光线投射，使用OpenGL ES 2.0进行渲染。<br>
+  * **[Ashley](https://github.com/libgdx/ashley)**: 一个很小的实体类框架。<br>
+  * **[Ai](https://github.com/libgdx/gdx-ai)**: 一个人工智能框架。<br>
 
-By clicking "Show Third Party Extensions" you can access a list of community-made libGDX extensions. If you want to add extensions later on, please take a look at [this](/wiki/articles/dependency-management-with-gradle#libgdx-extensions) wiki page.
+通过单击"显示第三方扩展"，您可以访问社区制作的 libGDX 扩展列表。如果您想稍后添加扩展，请查看 [此wiki页面](/wiki/articles/dependency-management-with-gradle#libgdx-extensions) 。
 
-When ready, click "Generate".
+准备就绪后，单击"生成"。
 
-**Note:** You may get a message indicating that you have a more recent version of Android build tools or Android API than the recommended. This is not a blocking message and you may continue.
+**注意：** 您可能会收到一条消息，指示您使用的 Android 构建工具或 Android API 版本比建议的版本更新。这不是阻止消息，您可以继续。
 {: .notice--info}
 
-## Project Layout
-This will create a directory called `mygame` with the following layout:
+## 项目布局
+这将创建一个使用以下布局调用的目录：`mygame`
 
 ```
-settings.gradle            <- definition of sub-modules. By default core, desktop, android, html, ios
-build.gradle               <- main Gradle build file, defines dependencies and plugins
+settings.gradle            <- 子模块的定义。By default core, desktop, android, html, ios
+build.gradle               <- 主 Gradle 构建文件，定义依赖项和插件
 gradlew                    <- local Gradle wrapper
-gradlew.bat                <- script that will run Gradle on Windows
-gradle                     <- script that will run Gradle on Unix systems
-local.properties           <- IntelliJ only file, defines Android SDK location
+gradlew.bat                <- 将在 Windows 上运行 Gradle 的脚本
+gradle                     <- 在 Unix 系统上运行 Gradle 的脚本
+local.properties           <- 仅限 IntelliJ 文件，定义 Android SDK 位置
 
 core/
     build.gradle           <- Gradle build file for core project*
@@ -78,7 +78,6 @@ desktop/
 android/
     build.gradle           <- Gradle build file for android project*
     AndroidManifest.xml    <- Android specific config
-    assets/                <- contains for your graphics, audio, etc.  Shared with other projects.
     res/                   <- contains icons for your app and other resources
     src/                   <- Source folder for your Android project, contains android launcher class
 
@@ -92,13 +91,13 @@ ios/
     src/                   <- Source folder for your iOS project, contains launcher
 ```
 
-## What is Gradle?
-libGDX projects are [Gradle](https://gradle.org/) projects, which makes managing dependencies and building considerably easier.
+## 什么是 Gradle？
+libGDX 项目是 [Gradle](https://gradle.org/) 项目, 这使得管理依赖关系和构建变得相当容易。
 
-Gradle is a **dependency management** system and thus provides an easy way to pull in third-party libraries into your project, without having to manually download them. Instead, Gradle just needs you to provide it with the names and versions of the libraries you want to include in your application. This is all done in the Gradle configuration files. Adding, removing and changing the version of a third-party library is as easy as changing a few lines in that configuration file. The dependency management system will pull in the libraries you specified from a central repository (in our case [Maven Central](http://search.maven.org/)) and store them in a directory outside of your project. Find out more in our [wiki](/wiki/articles/dependency-management-with-gradle).
+Gradle 是一个 **依赖关系管理系统** ，因此提供了一种将第三方库拉入项目的简单方法，而无需手动下载它们。相反，Gradle 只需要您向它提供要包含在应用程序中的库的名称和版本。这一切都是在 Gradle 配置文件中完成的。添加、删除和更改第三方库的版本就像更改该配置文件中的几行一样简单。 依赖关系管理系统将从中央存储库（在本例中为 [Maven Central](http://search.maven.org/)）中提取您指定的库，并将它们存储在项目外部的目录中。在我们的 [wiki](/wiki/articles/dependency-management-with-gradle) 中了解更多信息。
 {: .notice--info}
 
-In addition, Gradle is also a **build system** helping with building and packaging your application, without being tied to a specific IDE. This is especially useful if you use a build or continuous integration server, where IDEs aren't readily available. Instead, the build server can call the build system, providing it with a build configuration so it knows how to build your application for different platforms. If you want to know more about deploying your application, take a look [here](/wiki/deployment/deploying-your-application).
+此外，Gradle还是一个 **构建系统** ，可帮助构建和打包应用程序，而无需绑定到特定的 IDE 。如果您使用 IDE 不易获得的生成或持续集成服务器，则此功能特别有用。相反，生成服务器可以调用生成系统，为其提供生成配置，以便它知道如何为不同的平台生成应用程序。如果您想了解有关部署应用程序的更多信息，请查看 [此处](/wiki/deployment/deploying-your-application)。
 {: .notice--info}
 
-**Now you are ready to [import the project into your IDE and run it](/wiki/start/import-and-running).**
+**现在，您已准备好 [将项目导入 IDE 并运行它](/wiki/start/import-and-running)。**

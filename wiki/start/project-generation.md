@@ -1,35 +1,35 @@
 ---
-title: "Creating a Project"
-description: "The libGDX setup tool takes care of all the steps involved in setting up a libGDX Gradle project."
+title: "创建第一个项目"
+description: "libGDX Project Setup Tool 负责 libGDX Gradle 项目设置所涉及的所有步骤"
 redirect_from:
   - /dev/project_generation/
   - /dev/project-generation/
 ---
 
-To setup your first project and download the necessary dependencies, libGDX offers a setup tool.
+要设置您的第一个项目并下载必要的依赖项，libGDX 提供了一个设置工具。
 
 {% include setup_flowchart.html current='1' %}
 
-1. Download the libGDX Project Setup Tool (gdx-setup):
+1. 下载 libGDX Project Setup Tool (gdx-setup):
 
     <a href="/assets/downloads/legacy_setup/gdx-setup_latest.jar" class="btn btn--success" style="margin-right: 10px">Stable Release</a>
     <a href="https://libgdx-nightlies.s3.eu-central-1.amazonaws.com/libgdx-runnables/gdx-setup.jar" class="btn btn--success">Nightly Version</a>
 
-2. Double-click the downloaded file. If this doesn't work, open your command line tool, go to the download folder and run <br>`java -jar ./gdx-setup_latest.jar`
+2. 双击下载文件，如果启动失败，打开文件所在文件夹的控制台，运行 <br>`java -jar ./gdx-setup_latest.jar`
 
-This will open the following setup that will allow you to generate your project:
+这将打开以下设置，允许您生成项目：
 
 ![Setup UI](https://tvax3.sinaimg.cn/large/7fee3e64ly1gzoftfa5lkj20xe10un2g.jpg){: style="width: 601px;" }
 
-**Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](/wiki/start/project-setup-via-command-line) to create your project.
+**注意：** 除了安装工具的用户界面之外，您还可以使用命令行 [command-line](/wiki/start/project-setup-via-command-line) 来创建项目。
 {: .notice--primary}
 
-You are asked to provide the following parameters:
-* **Name**: the name of the application; lower case with minuses is usually a good idea, e.g. `my-game`
-* **Package**: the Java package under which your code will reside, e.g. `com.badlogic.mygame`
-* **Game Class**: the name of the main game Java class of your app, e.g. `MyGame`
-* **Destination**: the folder where your app will be created
-* **Android SDK**: the location of your Android SDK. With Android Studio, to find out where it is, start Android Studio and click "Configure" -> "SDK Manager". By default it is in `/Users/username/Library/Android/sdk` <br>
+系统会要求您提供以下参数：
+* **Name**: 应用程序的名称；带减号的小写通常是一个好主意，例如 `my-game`
+* **Package**: 代码将驻留在其中的 Java 包, 例如 `com.badlogic.mygame`
+* **Game Class**: 应用的主游戏 Java 类的名称 例如 `MyGame`
+* **Destination**: 将在其中创建应用的文件夹
+* **Android SDK**: 您的 Android SDK 的位置。使用　Android Studio，要了解它的位置，请启动　Android Studio　并单击"Configure" -> "SDK Manager"。默认情况下，它位于 `/Users/username/Library/Android/sdk` <br>
 
 ![Android Studio welcome screen](/assets/wiki/images/project-generation2.png){: style="width: 873px;" }
 ![Android Studio SDK manager](/assets/wiki/images/project-generation3.png){: style="width: 1159px;" }

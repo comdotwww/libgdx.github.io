@@ -1,5 +1,5 @@
 ![](/assets/images/logo.png)
 
-**This is the repo for the official libGDX website and wiki. The deployed page can be found at [libgdx.com](https://libgdx.com).**
+**这是官方 libGDX 网站和 wiki 的存储库。部署的页面可以在 [libgdx.com](https://libgdx.com) 找到。**
 
-If you want to contribute, please take a look at the [wiki](https://github.com/libgdx/libgdx.github.io/wiki) of this repo. For bigger changes, it is recommended to join our [Discord server](https://libgdx.com/community/discord/) and talk with the contributors about it. If you want to edit one of the wiki pages, those are located in the [wiki/](https://github.com/libgdx/libgdx.github.io/tree/dev/wiki) folder. Please also take a look at our [wiki style guide](https://libgdx.com/wiki/misc/wiki-style-guide).
+如果您想做出贡献，请查看此存储库的 [wiki](https://github.com/libgdx/libgdx.github.io/wiki) 。对于更大的更改，建议加入我们的 [Discord server](https://libgdx.com/community/discord/) 并与贡献者讨论它。如果要编辑其中一个 wiki 页面，这些页面位于 [wiki/](https://github.com/libgdx/libgdx.github.io/tree/dev/wiki) 文件夹中。另请查看我们的 [wiki 格式指南](https://libgdx.com/wiki/misc/wiki-style-guide)。

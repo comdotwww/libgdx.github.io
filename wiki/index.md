@@ -26,5 +26,5 @@ search: false
 * [用 Gradle 进行项目依赖管理](/wiki/articles/dependency-management-with-gradle)
 * [添加插件和第三方库](/wiki/articles/dependency-management-with-gradle)
 * [改善 Gradle 工作流程](/wiki/articles/improving-workflow-with-gradle)
-* [Creating Asset Project in Eclipse](/wiki/articles/creating-a-separate-assets-project-in-eclipse)
-* [Java Development Kit - Selection](/wiki/articles/java-development-kit-selection)
+* [在 Eclipse 中创建资源项目](/wiki/articles/creating-a-separate-assets-project-in-eclipse)
+* [JDK(Java Development Kit) 选择](/wiki/articles/java-development-kit-selection)

@@ -19,7 +19,7 @@ To setup your first project and download the necessary dependencies, libGDX offe
 
 This will open the following setup that will allow you to generate your project:
 
-![Setup UI](https://i.imgur.com/nI5lQKT.jpg){: style="width: 601px;" }
+![Setup UI](https://tvax3.sinaimg.cn/large/7fee3e64ly1gzoftfa5lkj20xe10un2g.jpg){: style="width: 601px;" }
 
 **Note:** Instead of the User Interface of the Setup Tool you can also use the [command-line](/wiki/start/project-setup-via-command-line) to create your project.
 {: .notice--primary}
